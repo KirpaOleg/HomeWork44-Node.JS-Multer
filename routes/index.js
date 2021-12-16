@@ -26,12 +26,9 @@ router.post('/', upload.single('my-file'), (req, res) => {
   
 
   const fullpath = path.dirname(__dirname) + '/upload/' + req.file.filename;
-  const smallPath = './upload/' + req.file.filename;
+  const smallPath = '/' + req.file.filename;
 
-  // console.log(fullpathArr);
-    // res.send(`Hello ${req.body.person}<br><img src="${fullpath}">`)
-    // res.send(`<img src="${fullpath}">`)
-  res.send(fullpath)
+   res.send(`<img src="${smallPath}">`)
 });
 
 module.exports = router;
